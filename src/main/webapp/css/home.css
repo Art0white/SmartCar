@@ -1,0 +1,122 @@
+
+html {
+  height: 100%;
+}
+body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background: linear-gradient(#fef8de, #fffae6);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*上栏格式*/
+.m-padded-tb-mini {
+	padding-top :0.2em !important;
+	padding-bottom: 0.2em !important;
+}
+/*中间格式*/
+.m-container {
+	max-width:72em !important;
+	margin: auto !important;
+}
+.m-padded-tb-large{
+	padding-top :2em !important;
+	padding-bottom: 2em !important;
+}
+
+/*饼状图*/
+#chartdiv {
+	width: 100%;
+	height: 100%;
+}
+
+.amcharts-pie-slice {
+	transform: scale(1);
+	transform-origin: 50% 50%;
+	transition-duration: 0.3s;
+	transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	cursor: pointer;
+	box-shadow: 0 0 30px 0 #000;
+}
+
+.amcharts-pie-slice:hover {
+	transform: scale(1.1);
+	filter: url(#shadow);
+}   
+
+.amcharts-balloon-div {
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+	border: 2px solid #000;
+}
+
+.chartdiv-container {
+	width: 100%;
+	height: 280px;
+	position: relative;
+}
+/* 柱状图 */
+#chartdivzhu {
+  width: 100%;
+  height: 250px;
+}
+/* 模块格式 */
+.pen {
+    border-radius:15px;
+	background: linear-gradient(#ffbc9b, #fff1b9);   /* #fee27b */
+	height: 280px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}
+.battery {
+    border-radius:15px;
+	background: linear-gradient(#a0d878, #c8e6c6);
+	height: 280px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}
+.zhu {
+    border-radius:15px;
+	background: linear-gradient(#fff1b9, #c8e6c6);
+	height: 280px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}
+.x1 {
+    border-radius:20px;
+	background: linear-gradient(#381801, #502f16);
+	height: 81px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}
+.x2 {
+    border-radius:20px;
+	background: linear-gradient(#381801, #502f16);
+	height: 81px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}
+.x3 {
+    border-radius:20px;
+	background: linear-gradient(#381801, #502f16);
+	height: 81px;
+	box-shadow: 0 0 5px #d3cbaf,
+	            0 0 20px #d3cbaf,
+	            0 0 40px #d3cbaf,
+	            0 0 80px #d3cbaf;
+}

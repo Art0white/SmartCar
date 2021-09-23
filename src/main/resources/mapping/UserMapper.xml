@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--用户-->
+<mapper namespace="com.lmx.dao.IUserDao">
+	<!--查询通过id-->
+	<select id="queryById" resultType="User" parameterType="int">
+		select * from t_user where id=#{id}
+	</select>
+	<!--登录：查询通过用户名和密码-->
+	<select id="login" resultType="User" parameterType="User">
+		select * from t_user where userNo=#{userNo} and password=#{password}
+	</select>
+	<!--查询密码通过用户名-->
+	<select id="getPassword" resultType="User" parameterType="String">
+		select * from t_user where userNo=#{userNo}
+	</select>
+	<!--修改密码-->
+	<update id="modifyPassword" >
+		update t_user set password = #{password} where userNo=#{userNo}
+	</update>
+	
+</mapper>
