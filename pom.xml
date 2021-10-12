@@ -151,6 +151,12 @@
       <version>3.2</version>
     </dependency>
 
+    <!--摄像头-->
+    <dependency>
+      <groupId>org.bytedeco</groupId>
+      <artifactId>javacv-platform</artifactId>
+      <version>1.4.4</version>
+    </dependency>
     <!-- json -->
     <!-- 		<dependency>
                 <groupId>org.json</groupId>

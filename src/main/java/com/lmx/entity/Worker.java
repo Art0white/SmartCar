@@ -7,10 +7,18 @@ public class Worker {
     private String workerNo;
     private String workName;
     private String sex;
+
     public Worker() {
         super();
         // TODO Auto-generated constructor stub
     }
+    public Worker(int id, String workerNo, String workName, String sex) {
+        this.id = id;
+        this.workerNo = workerNo;
+        this.workName = workName;
+        this.sex = sex;
+    }
+
     public int getId() {
         return id;
     }

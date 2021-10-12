@@ -1,8 +1,7 @@
 package com.lmx.web;
 
-import com.lmx.entity.Worker;
 import com.lmx.entity.User;
-import com.lmx.service.*;
+import com.lmx.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,16 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
+import java.util.List;
 
 @Controller
 public class UserController {
 	
 	@Autowired
 	private IUserService userService;
-	
-//	@Autowired
-//	private IWorkerService studentService;
 
 	@RequestMapping(value="/login")
 	public String Login(String userNo,String password,Model model,HttpServletRequest request) {
@@ -35,7 +31,7 @@ public class UserController {
 
 			session.setAttribute("currentUser", currentUser);
 			//model.addAttribute("userNo", userNo);
-			return "../../home.jsp";
+			return "home.jsp";
 		}else {
 			model.addAttribute("message", "当前用户不是管理员");
 			return "../../index.jsp";
@@ -46,8 +42,14 @@ public class UserController {
 	public String quitSystem(Model model,HttpServletRequest request) {
 
 		request.getSession().invalidate();
-
 		return "../../index.jsp";
 	}
-	
+
+	@RequestMapping(value = "/ufindall")
+	public String toFindAll(Model model, HttpServletRequest request) {
+		List<User> userList = userService.ufindAll();
+
+		model.addAttribute("userListw", userList);
+		return "mine.jsp";
+	}
 }

@@ -8,8 +8,60 @@ body {
 	background: linear-gradient(#fef8de, #fffae6);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 /*上栏格式*/
 .m-padded-tb-mini {
 	padding-top :0.2em !important;
 	padding-bottom: 0.2em !important;
 }
+/*中间格式*/
+.m-container {
+	max-width:72em !important;
+	margin: auto !important;
+}
+.m-padded-tb-large{
+	padding-top :2em !important;
+	padding-bottom: 2em !important;
+}
+
+/*左模块样式*/
+.carvideo {
+	border-radius:15px;
+	background: linear-gradient(to bottom, #FFEEEE, #DDEFBB);   /* #fee27b */
+	height: 380px;
+	box-shadow: 0 0 5px #d3cbaf,
+	0 0 20px #d3cbaf,
+	0 0 40px #d3cbaf,
+	0 0 80px #d3cbaf;
+}
+
+/*右列表模块样式*/
+.list {
+	border-radius:15px;
+	background: linear-gradient(to bottom, #FFEEEE, #FAFFD1);
+	height: 560px;
+	box-shadow: 0 0 5px #d3cbaf,
+	0 0 20px #d3cbaf,
+	0 0 40px #d3cbaf,
+	0 0 80px #d3cbaf;
+}
+
+/*左下小模块样式*/
+.smodule {
+	margin-top: 20px;
+	border-radius:15px;
+	background: linear-gradient(to bottom, #616161, #9bc5c3);
+	height: 160px;
+	box-shadow: 0 0 5px #d3cbaf,
+	0 0 20px #d3cbaf,
+	0 0 40px #d3cbaf,
+	0 0 80px #d3cbaf;
+}
+
+.center {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%); /*translateX(-50%)*/
+}
+

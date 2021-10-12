@@ -31,7 +31,7 @@ body {
 }
 
 section {
-	padding: 60px 0;
+	padding: 30px 0;
 }
 
 section .section-title {
@@ -120,7 +120,8 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-	min-height: 312px;
+	min-height: 255px;
+
 }
 
 .backside .card a {
@@ -134,7 +135,7 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 }

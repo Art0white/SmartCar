@@ -19,5 +19,9 @@
 	<update id="modifyPassword" >
 		update t_user set password = #{password} where userNo=#{userNo}
 	</update>
+
+	<select id="ufindAll" resultType="User">
+		select * from t_user
+	</select>
 	
 </mapper>

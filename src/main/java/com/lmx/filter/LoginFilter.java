@@ -36,8 +36,9 @@ public class LoginFilter implements Filter {
 		
 		System.out.println("当前路径："+path);
 		User currentUser = (User)session.getAttribute("currentUser");
-		if (path.indexOf("index.html") > -1 || path.indexOf(".jpg") > -1
-				|| path.indexOf(".html") > -1 || path.indexOf(".png") > -1 || path.indexOf(".css") > -1
+		if (path.indexOf("index.jsp") > -1 || path.indexOf("login") > -1
+				|| path.indexOf(".jpg") > -1 || path.indexOf(".html") > -1
+				|| path.indexOf(".png") > -1 || path.indexOf(".css") > -1
 				|| path.indexOf(".js") > -1) {
 			chain.doFilter(servletRequest, servletResponse);
 			return;
@@ -45,7 +46,7 @@ public class LoginFilter implements Filter {
 		if(currentUser == null || "".equals(currentUser)) {
 			//servletResponse.sendRedirect("${pageContext.request.contextPath}/index.jsp");
 			//servletRequest.getRequestDispatcher("/index.jsp").forward(request, response);
-			servletResponse.sendRedirect("/SmartCar/index.html");
+			servletResponse.sendRedirect("/SmartCar/index.jsp");
 		}else {
 			chain.doFilter(servletRequest, servletResponse);
 		}

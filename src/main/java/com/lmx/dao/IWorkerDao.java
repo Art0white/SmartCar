@@ -5,9 +5,13 @@ import com.lmx.entity.Worker;
 
 public interface IWorkerDao {
     Worker selectWorker(int id);
+
     int addUser(Worker user);
+
     List<Worker> showAllUser();
+
     int deleteUser(int id);
+
     int updateUser(Worker user);
 }
 //public interface IStudentDao {

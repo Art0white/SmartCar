@@ -1,5 +1,6 @@
 package com.lmx.service.impl;
 
+import com.lmx.entity.Equipment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,10 +8,11 @@ import com.lmx.dao.IUserDao;
 import com.lmx.entity.User;
 import com.lmx.service.IUserService;
 
+import java.util.List;
+
 //使用者
 @Service
 public class UserServiceImpl implements IUserService{
-	
 	@Autowired
 	private IUserDao userDao;
 	
@@ -35,9 +37,10 @@ public class UserServiceImpl implements IUserService{
 		return num;
 	}
 
+	public List<User> ufindAll() {
+		// TODO Auto-generated method stub
+		List<User> currentUser = userDao.ufindAll();
 
-
-
-
-
+		return currentUser;
+	}
 }
