@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>home</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-		<link rel="stylesheet" href="../../css/home.css">
-		<link rel="stylesheet" href="../../css/power.css">
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/power.css">
 	</head>
 	<body>
 		<!-- 导航 -->
@@ -17,7 +17,7 @@
 					<h2 class="ui teal header item">矿洞实时检测</h2>
 					<a href="" class="item"><i class="home icon"></i>主页</a>
 					<a href="car.jsp" class="item"><i class="idea icon"></i>小车</a>
-					<a href="mine.jsp" class="item"><i class="tags icon"></i>矿洞</a>
+					<a href="/SmartCar_war/eqfind" class="item"><i class="tags icon"></i>矿洞</a>
 					<a href="team.jsp" class="item"><i class="info icon"></i>关于我们</a>
 					<div class="right item">
 						<div class="ui icon input ">                            <!-- 加   transparent    变透明 -->
@@ -35,14 +35,12 @@
 		<script src="https://www.amcharts.com/lib/3/pie.js"></script>
 		<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-		<script src="../../js/pen.js"> </script>
+		<script src="js/pen.js"> </script>
 		<!-- zhu -->
 		<script src="//www.amcharts.com/lib/4/core.js"></script>
 		<script src="//www.amcharts.com/lib/4/charts.js"></script>
 		<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
-		<script src="../../js/zhu.js"> </script>
-		
-		
+		<script src="js/zhu.js"> </script>
 		
 		<div class="m-container m-padded-tb-large">
 			<div class="ui container">
@@ -52,19 +50,21 @@
 						<div id="pie" class="pen">
 							<div class="chartdiv-container">
 								</br>
-								<div class="chartdiv-balloon">设备状态饼状图</div>
+<%--								<div class="chartdiv-balloon"></div>--%>
+								<div class="ttable">设备状态饼状图</div>
 								<div id="chartdiv"></div>
 							</div>
 						</div>
 					</div>
 					<!-- 右一6格 -->
 					<div class="six wide column">  <!-- style="background-color: #03E9F4;" -->
-							<div id="battery" class="battery" style="text-align: center;">
-								<h5>小车电量</h5>
-								<div class="batterypower center">
-									<div class="liquidpower"></div>
-								</div>
+						<div id="battery" class="battery">
+							</br>
+							<div class="ttable">小车电量</div>
+							<div class="batterypower center">
+								<div class="liquidpower"></div>
 							</div>
+						</div>
 					</div>
 					<!-- 左二13格 -->
 					<div class="thirteen wide column"> <!-- style="background-color: #E3DBBF;" -->
@@ -95,7 +95,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>

@@ -120,3 +120,13 @@ body {
 	            0 0 40px #d3cbaf,
 	            0 0 80px #d3cbaf;
 }
+
+/*标题*/
+.ttable{
+	font-size: 30px;
+	color: #795252;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 15px;
+}

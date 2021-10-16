@@ -13,3 +13,30 @@ body {
 	padding-top :0.2em !important;
 	padding-bottom: 0.2em !important;
 }
+/*中间格式*/
+.m-container {
+	max-width:72em !important;
+	margin: auto !important;
+}
+.m-padded-tb-large{
+	padding-top :2em !important;
+	padding-bottom: 2em !important;
+}
+
+/*左模块样式*/
+.carvideo {
+	border-radius:15px;
+	background: linear-gradient(to bottom, #00F5A0, #00D9F5);   /* #fee27b */
+	height: 380px;
+	box-shadow: 0 0 5px #d3cbaf,
+	0 0 20px #d3cbaf,
+	0 0 40px #d3cbaf,
+	0 0 80px #d3cbaf;
+}
+
+.center {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%); /*translateX(-50%)*/
+}
