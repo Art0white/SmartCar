@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lmx.dao.IEquipmentDao">
+    <!--查询通过id-->
+    <select id="queryById" resultType="Equipment" parameterType="int">
+        select * from t_equipment where id=#{id}
+    </select>
+
+    <select id="getStatus" resultType="int" parameterType="String">
+        select state from t_equipment where equipmentNo=#{equipmentNo}
+    </select>
+
+    <select id="getUpdateTime" resultType="Date" parameterType="String">
+        select updateTime from t_equipment where equipmentNo=#{equipmentNo}
+    </select>
+
+    <select id="efindAll" resultType="Equipment">
+        select * from t_equipment
+    </select>
+
+</mapper>
