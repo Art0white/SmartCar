@@ -60,16 +60,14 @@
         </jsp-property-group>
     </jsp-config>
 
+    <filter>
+        <filter-name>login</filter-name>
+        <filter-class>com.lmx.filter.LoginFilter</filter-class>
+    </filter>
 
-    <!-- 验证登陆 -->
-<!--    <filter>-->
-<!--        <filter-name>login</filter-name>-->
-<!--        <filter-class>com.lmx.filter.LoginFilter</filter-class>-->
-<!--    </filter>-->
-
-<!--    <filter-mapping>-->
-<!--        <filter-name>login</filter-name>-->
-<!--        <url-pattern>/*</url-pattern>-->
-<!--    </filter-mapping>-->
+    <filter-mapping>
+        <filter-name>login</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 </web-app>

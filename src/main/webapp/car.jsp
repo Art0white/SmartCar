@@ -18,6 +18,8 @@
 					<a href="" class="item"><i class="idea icon"></i>小车</a>
 					<a href="/SmartCar_war/eqfind" class="item"><i class="tags icon"></i>矿洞</a>
 					<a href="team.jsp" class="item"><i class="info icon"></i>关于我们</a>
+					<a href="${pageContext.request.contextPath}/quit" class="item"><i class="arrow alternate circle right"></i>退出系统</a>
+
 					<div class="right item">
 						<div class="ui icon input ">                            <!-- 加   transparent    变透明 -->
 							<input type="text" placeholder="Search....">
@@ -38,7 +40,8 @@
 							<div class="column">
 								<div id="carvideo" class="carvideo">
 									<div id="backblack" class="center" style="background: #000000;height: 360px; width: 480px; padding: 0;">
-										<video id="video" class="center" style="height: 360px; width: 480px; margin: 0;"></video>
+<%--										<video id="video" class="center" style="height: 360px; width: 480px; margin: 0;"></video>--%>
+										<video id="video" class="center" src="https://dh5.cntv.qcloudcdn.com/asp/h5e/hls/main/0303000a/3/default/107693666a0f49059ed78f1b89daae34/main.m3u8?maxbr=2048&amp;contentid=15120519184043" autoplay="autoplay" controls="controls" muted="muted" style="height: 360px; width: 480px; margin: 0;"></video>
 									</div>
 
 								</div>
@@ -67,39 +70,39 @@
 		</div>
 
 		<%--摄像头--%>
-		<script>
-			var video = document.getElementById('video');
+<%--		<script>--%>
+<%--			var video = document.getElementById('video');--%>
 
-			if (navigator.mediaDevices.getUserMedia) {
-				//最新的标准API
-				navigator.mediaDevices.getUserMedia({video : {width: 1000, height: 1000}}).then(success).catch(error);
-			} else if (navigator.webkitGetUserMedia) {
-				//webkit核心浏览器
-				navigator.webkitGetUserMedia({video : {width: 1000, height: 1000}},success, error)
-			} else if (navigator.mozGetUserMedia) {
-				//firfox浏览器
-				navigator.mozGetUserMedia({video : {width: 1000, height: 1000}}, success, error);
-			} else if (navigator.getUserMedia) {
-				//旧版API
-				navigator.getUserMedia({video : {width: 1000, height: 1000}}, success, error);
-			}
+<%--			if (navigator.mediaDevices.getUserMedia) {--%>
+<%--				//最新的标准API--%>
+<%--				navigator.mediaDevices.getUserMedia({video : {width: 1000, height: 1000}}).then(success).catch(error);--%>
+<%--			} else if (navigator.webkitGetUserMedia) {--%>
+<%--				//webkit核心浏览器--%>
+<%--				navigator.webkitGetUserMedia({video : {width: 1000, height: 1000}},success, error)--%>
+<%--			} else if (navigator.mozGetUserMedia) {--%>
+<%--				//firfox浏览器--%>
+<%--				navigator.mozGetUserMedia({video : {width: 1000, height: 1000}}, success, error);--%>
+<%--			} else if (navigator.getUserMedia) {--%>
+<%--				//旧版API--%>
+<%--				navigator.getUserMedia({video : {width: 1000, height: 1000}}, success, error);--%>
+<%--			}--%>
 
-			function success(stream) {
-				//兼容webkit核心浏览器
-				// let CompatibleURL = window.URL || window.webkitURL;
+<%--			function success(stream) {--%>
+<%--				//兼容webkit核心浏览器--%>
+<%--				// let CompatibleURL = window.URL || window.webkitURL;--%>
 
-				//将视频流设置为video元素的源
-				console.log(stream);
+<%--				//将视频流设置为video元素的源--%>
+<%--				console.log(stream);--%>
 
-				//video.src = CompatibleURL.createObjectURL(stream);
-				video.srcObject = stream;
-				video.play();
-			}
+<%--				//video.src = CompatibleURL.createObjectURL(stream);--%>
+<%--				video.srcObject = stream;--%>
+<%--				video.play();--%>
+<%--			}--%>
 
-			function error(error) {
-				console.log(`访问用户媒体设备失败${error.name}, ${error.message}`);
-			}
+<%--			function error(error) {--%>
+<%--				console.log(`访问用户媒体设备失败${error.name}, ${error.message}`);--%>
+<%--			}--%>
 
-		</script>
+<%--		</script>--%>
 	</body>
 </html>

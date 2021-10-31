@@ -46,7 +46,7 @@ public class LoginFilter implements Filter {
 		if(currentUser == null || "".equals(currentUser)) {
 			//servletResponse.sendRedirect("${pageContext.request.contextPath}/index.jsp");
 			//servletRequest.getRequestDispatcher("/index.jsp").forward(request, response);
-			servletResponse.sendRedirect("/SmartCar/index.jsp");
+			servletResponse.sendRedirect("/SmartCar_war/index.jsp");
 		}else {
 			chain.doFilter(servletRequest, servletResponse);
 		}

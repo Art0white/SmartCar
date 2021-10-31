@@ -185,7 +185,7 @@
     </dependency>
 
     <!-- jquery -->
-    <dependency>
+    <dependency>s
       <groupId>org.webjars.bower</groupId>
       <artifactId>jquery</artifactId>
       <version>3.2.1</version>
