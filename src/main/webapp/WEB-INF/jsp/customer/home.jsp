@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>home</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-		<link rel="stylesheet" href="css/home.css">
-		<link rel="stylesheet" href="css/power.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/home.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/power.css">
 	</head>
 	<body>
 		<!-- 导航 -->
@@ -36,12 +36,12 @@
 		<script src="https://www.amcharts.com/lib/3/pie.js"></script>
 		<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-		<script src="js/pen.js"> </script>
+		<script src="../js/pen.js"> </script>
 		<!-- zhu -->
 		<script src="//www.amcharts.com/lib/4/core.js"></script>
 		<script src="//www.amcharts.com/lib/4/charts.js"></script>
 		<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
-		<script src="js/zhu.js"> </script>
+		<script src="../js/zhu.js"> </script>
 		
 		<div class="m-container m-padded-tb-large">
 			<div class="ui container">
