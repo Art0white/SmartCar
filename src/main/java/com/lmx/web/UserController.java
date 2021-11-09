@@ -39,6 +39,25 @@ public class UserController {
 		}
 	}
 
+	//跳转到主页
+	@RequestMapping(value="/home")
+	public String homeSystem(Model model,HttpServletRequest request) {
+
+		return "../../home.jsp";
+	}
+
+	@RequestMapping(value="/car")
+	public String carSystem(Model model,HttpServletRequest request) {
+
+		return "../../car.jsp";
+	}
+
+	@RequestMapping(value="/team")
+	public String teamSystem(Model model,HttpServletRequest request) {
+
+		return "../../team.jsp";
+	}
+
 	@RequestMapping(value="/quit")
 	public String quitSystem(Model model,HttpServletRequest request) {
 

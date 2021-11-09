@@ -20,10 +20,10 @@
 			<div class="ui container">
 				<div class="ui inverted seconfary menu">
 					<h2 class="ui teal header item">矿洞实时检测</h2>
-					<a href="home.jsp" class="item"><i class="home icon"></i>主页</a>
-					<a href="car.jsp" class="item"><i class="idea icon"></i>小车</a>
+					<a href="${pageContext.request.contextPath}/eqfind" class="item"><i class="home icon"></i>主页</a>
+					<a href="${pageContext.request.contextPath}/car" class="item"><i class="idea icon"></i>小车</a>
 					<a href="" class="item"><i class="tags icon"></i>矿洞</a>
-					<a href="team.jsp" class="item"><i class="info icon"></i>关于我们</a>
+					<a href="${pageContext.request.contextPath}/team" class="item"><i class="info icon"></i>关于我们</a>
 					<a href="${pageContext.request.contextPath}/quit" class="item"><i class="arrow alternate circle right"></i>退出系统</a>
 
 					<div class="right item">

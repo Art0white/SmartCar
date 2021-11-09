@@ -18,6 +18,7 @@ public class EquipmentController {
     @Autowired
     private IEquipmentService equipmentService;
 
+    //矿洞设备信息
     @RequestMapping(value = "/eqfind")
     public String efindAll(Model model, HttpServletRequest request) {
         List<Equipment> equipmentList = equipmentService.efindAll();
