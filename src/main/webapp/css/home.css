@@ -130,3 +130,10 @@ body {
 	text-align: center;
 	margin-bottom: 15px;
 }
+
+.pencenter {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translateX(-50%) translateY(-50%);
+}

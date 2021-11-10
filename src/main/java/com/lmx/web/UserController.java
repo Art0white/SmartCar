@@ -50,10 +50,10 @@ public class UserController {
 		return "../jsp/customer/car.jsp";
 	}
 
-	@RequestMapping(value="/team")
+	@RequestMapping(value="/customer")
 	public String teamSystem(Model model,HttpServletRequest request) {
 
-		return "../jsp/customer/team.jsp";
+		return "../jsp/customer/customer.jsp";
 	}
 
 	@RequestMapping(value="/quit")

@@ -39,23 +39,22 @@ public class LoginFilter implements Filter {
 		System.out.println("当前用户："+currentUser);
 		if (path.indexOf("index.jsp") > -1 || path.indexOf("login") > -1
 				|| path.indexOf(".jpg") > -1 || path.indexOf(".html") > -1
-				|| path.indexOf(".png") > -1 || path.indexOf(".css") > -1
-				|| path.indexOf(".js") > -1) {
+				|| path.indexOf(".png") > -1 ){
 			chain.doFilter(servletRequest, servletResponse);
 			return;
 		}
 
-//		if (path.contains("index.jsp") || path.contains("login")
-//				|| path.contains(".jpg") || path.contains(".html")
-//				|| path.contains(".png") || path.contains(".css")
-//				|| path.contains(".js")) {
+//		if (path.indexOf("index.jsp") > -1 || path.indexOf("login") > -1
+//				|| path.indexOf(".jpg") > -1 || path.indexOf(".html") > -1
+//				|| path.indexOf(".png") > -1 || path.indexOf(".css") > -1
+//				|| path.indexOf(".js") > -1) {
 //			chain.doFilter(servletRequest, servletResponse);
 //			return;
 //		}
 		if(currentUser == null || "".equals(currentUser)) {
 			//servletResponse.sendRedirect("${pageContext.request.contextPath}/index.jsp");
 			//servletRequest.getRequestDispatcher("/index.jsp").forward(request, response);
-			servletResponse.sendRedirect("/SmartCar_war/index.jsp");
+			servletResponse.sendRedirect("/SmartCar/index.jsp");
 		}else {
 			chain.doFilter(servletRequest, servletResponse);
 		}

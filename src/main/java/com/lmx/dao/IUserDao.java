@@ -1,6 +1,5 @@
 package com.lmx.dao;
 
-import com.lmx.entity.Equipment;
 import org.apache.ibatis.annotations.Param;
 import com.lmx.entity.User;
 

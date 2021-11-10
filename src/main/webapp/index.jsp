@@ -4,7 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>login</title>
+
 		<link rel="stylesheet" href="./css/login.css">
+
 	</head>
 	<body>
 		<div class="login-box" >
@@ -12,11 +14,11 @@
 			<form action="${pageContext.request.contextPath}/login" method="post" class="login-form" id="startlogin">
 <!--				role="form" action="/login" method="post"-->
 				<div class="user-box">
-					<input type="text" id="userNo" name="userNo" required>
+					<input type="text" id="userNo" name="userNo" onkeydown=KeyDown() required>
 					<label>Username</label>
 				</div>
 				<div class="user-box">
-					<input type="password" id="password" name="password" required>
+					<input type="password" id="password" name="password" onkeydown=KeyDown() required>
 					<label>Password</label>
 				</div>
 
@@ -25,13 +27,23 @@
 				</div>
 
 				<div class="center-me">
-						<div onclick="document:startlogin.submit();" id="subbutton">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							Submit
-						</div>
+					<div onclick="document:startlogin.submit();" id="subbutton">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Submit
+					</div>
+<%--					回车登录--%>
+					<script type="text/javascript">
+						//回车登陆
+						function KeyDown() {
+							if (event.keyCode == 13) {
+								console.log(event.keyCode);
+								document.getElementById("subbutton").click();  //类选择器选择按钮
+							}
+						}
+					</script>
 <%--					<a href="home.jsp">--%>
 <%--						<span></span>--%>
 <%--						<span></span>--%>

@@ -6,12 +6,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<%--清理缓存--%>
 		<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> <meta HTTP-EQUIV="expires" CONTENT="0">
-		<title>mine</title>
+		<title>矿洞界面</title>
+
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mine.css">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<%--		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>--%>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/vendors/jquery-1.12/package/dist/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -23,7 +26,7 @@
 					<a href="${pageContext.request.contextPath}/home" class="item"><i class="home icon"></i>主页</a>
 					<a href="${pageContext.request.contextPath}/car" class="item"><i class="idea icon"></i>小车</a>
 					<a href="" class="item"><i class="tags icon"></i>矿洞</a>
-					<a href="${pageContext.request.contextPath}/team" class="item"><i class="info icon"></i>关于我们</a>
+					<a href="${pageContext.request.contextPath}/customer" class="item"><i class="info icon"></i>我的</a>
 					<a href="${pageContext.request.contextPath}/quit" class="item"><i class="arrow alternate circle right"></i>退出系统</a>
 
 					<div class="right item">
@@ -86,11 +89,13 @@
 								</table>
 							</div>
 						</div>
+
 						<script type="text/javascript">   <%--自动刷新局部div--%>
 							setInterval(function() {
 								$("#list").load(location.href+" #list>*","");
 							}, 5000);
 						</script>
+
 					</div>
 				</div>
 			</div>
