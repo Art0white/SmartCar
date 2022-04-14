@@ -185,7 +185,7 @@
     </dependency>
 
     <!-- jquery -->
-    <dependency>s
+    <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>jquery</artifactId>
       <version>3.2.1</version>
@@ -203,6 +203,11 @@
       <version>2.4</version>
     </dependency>
 
+<!--    <dependency>-->
+<!--      <groupId>com.alibaba</groupId>-->
+<!--      <artifactId>druid</artifactId>-->
+<!--      <version>1.1.19</version>-->
+<!--    </dependency>-->
 
   </dependencies>
 

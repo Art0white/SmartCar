@@ -21,7 +21,7 @@ public class UserController {
 		User currentUser = userService.login(userNo, password);
 		if("".equals(currentUser)||currentUser==null) {
 			model.addAttribute("message", "用户名或密码错误");
-			return "../../index.jsp";
+			return "../../login.jsp";
 		}
 		if(currentUser.getPermission()==3) {
 			// request.getSession().setAttribute("userNo", userNo);
@@ -33,7 +33,7 @@ public class UserController {
 			return "../jsp/customer/home.jsp";
 		}else {
 			model.addAttribute("message", "当前用户不是管理员");
-			return "../../index.jsp";
+			return "../../login.jsp";
 		}
 	}
 
@@ -56,10 +56,16 @@ public class UserController {
 		return "../jsp/customer/customer.jsp";
 	}
 
+	@RequestMapping(value="/map")
+	public String mapSystem(Model model,HttpServletRequest request) {
+
+		return "../jsp/customer/map.jsp";
+	}
+
 	@RequestMapping(value="/quit")
 	public String quitSystem(Model model,HttpServletRequest request) {
 
 		request.getSession().invalidate();
-		return "../../index.jsp";
+		return "../../login.jsp";
 	}
 }

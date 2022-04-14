@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{amcharts, animated, charts, core, jquery, jquery-1.12.3, light, pie, semantic-ui}" />
+    <file url="file://$PROJECT_DIR$" libraries="{amcharts, animated, charts, core, eventemitter2, jquery, jquery-1.12.3, light, pie, roslib, semantic-ui, vue}" />
   </component>
 </project>
