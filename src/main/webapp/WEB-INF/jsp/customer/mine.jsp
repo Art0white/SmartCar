@@ -5,7 +5,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%--		适配手机--%>
+<%--		<meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
 
 		<%--清理缓存--%>
 		<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> <meta HTTP-EQUIV="expires" CONTENT="0">
