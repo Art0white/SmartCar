@@ -7,7 +7,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%--		适配手机--%>
 <%--		<meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
-
 		<%--清理缓存--%>
 		<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> <meta HTTP-EQUIV="expires" CONTENT="0">
 		<title>矿洞界面</title>
@@ -16,6 +15,14 @@
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mine.css">
 <%--		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>--%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/vendors/jquery-1.12/package/dist/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			function zdxj() {
+				s = new ActiveXObject("WScript.Shell");
+				cmd = "mstcs";
+				s.Run(cmd);
+			}
+		</script>
 	</head>
 
 	<body>
@@ -54,7 +61,7 @@
 							<%--左十下--%>
 							<div class="column">
 								<div id="smodule" class="smodule">
-
+									<button onclick="zdxj()">自动巡检</button>
 								</div>
 							</div>
 						</div>
@@ -101,7 +108,7 @@
 				</div>
 			</div>
 		</div>
-
-
 	</body>
+
+
 </html>
