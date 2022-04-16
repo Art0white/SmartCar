@@ -15,14 +15,10 @@
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mine.css">
 <%--		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>--%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/vendors/jquery-1.12/package/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/roslib.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/ros3d.js"></script>
 
-		<script type="text/javascript">
-			function zdxj() {
-				s = new ActiveXObject("WScript.Shell");
-				cmd = "mstcs";
-				s.Run(cmd);
-			}
-		</script>
 	</head>
 
 	<body>
@@ -56,12 +52,15 @@
 							<%--左十上--%>
 							<div class="column">
 								<div id="ourmap" class="ourmap">
+									<div id = "kmap"></div>
 								</div>
 							</div>
 							<%--左十下--%>
 							<div class="column">
 								<div id="smodule" class="smodule">
 									<button onclick="zdxj()">自动巡检</button>
+									<input type="text" id="numValue"/>
+									<input type="text" id="xyzStr"/>
 								</div>
 							</div>
 						</div>
@@ -110,5 +109,80 @@
 		</div>
 	</body>
 
+	<script type="text/javascript">
+		var ros = new ROSLIB.Ros({
+			url : 'ws://10.100.71.139:9090'
+		});
 
+		var viewer = new ROS3D.Viewer({
+			divID : 'kmap',
+			width : 684.25,
+			height : 380,
+			antialias : true
+		});
+
+		var gridClient = new ROS3D.OccupancyGridClient({
+			ros : ros,
+			rootObject : viewer.scene,
+			continuous: true
+		});
+
+		var OdomTfClient = new ROSLIB.TFClient({
+			ros : ros,
+			angularThres : 0.01,
+			transThres : 0.01,
+			rate : 10.0,
+			fixedFrame : '/odom'
+		});
+
+		//路径
+		var printL1 = new ROS3D.Path({
+			ros: ros,
+			topic: '/move_base/GlobalPlanner/plan',
+			tfClient: OdomTfClient,
+			rootObject: viewer.scene,
+			color : 0xd44f4a
+		});
+
+		//箭头
+		var printL2 = new ROS3D.PoseArray({
+			ros: ros,
+			topic: '/move_base/TebLocalPlannerROS/teb_poses',
+			tfClient: OdomTfClient,
+			rootObject: viewer.scene,
+			length : 0.5,
+			color : 0x29cf37
+		});
+
+		//小车位置
+		var scanClient = new ROS3D.PoseArray({
+			ros: ros,
+			topic: '/particlecloud',
+			tfClient: OdomTfClient,
+			rootObject: viewer.scene,
+			length : 0.1,
+			color : 0x0014cc
+		});
+
+		function zdxj() {
+			var numValue = document.getElementById("numValue").value;
+			var xyzStr = document.getElementById("xyzStr").value;
+
+
+			var autoRun = new ROSLIB.Topic({
+				ros : ros,
+				name : 'mission_signal',
+				messageType : 'check_points/checkpoint_msgs'
+			});
+			let numTo = numValue;
+
+
+			var xyz = new ROSLIB.Message({
+				numOfCheckpoint : parseInt(numValue),
+				dataOfCheckpoint : [xyzStr]
+			});
+			autoRun.publish(xyz);
+			console.log("执行成功")
+		}
+	</script>
 </html>
