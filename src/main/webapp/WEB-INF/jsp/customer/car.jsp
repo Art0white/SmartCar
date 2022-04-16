@@ -201,6 +201,8 @@
 		loader : ROS3D.COLLADA_LOADER_2
 	})
 
+
+
 	var scanClient = new ROS3D.LaserScan({
 		ros: ros,
 		topic: '/scan',
